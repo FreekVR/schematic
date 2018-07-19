@@ -1,4 +1,19 @@
-### 3.8.4 ##
+### 3.8.9 ###
+- Fixed assignUserGroup permission serialization bug
+
+### 3.8.8 ###
+- Added ability to exclude datatypes on import (thanks @Zae)
+
+### 3.8.7 ###
+- Fixes missing field errors
+
+### 3.8.6 ###
+- Fixed a bug where element index settings source order was not synced
+
+### 3.8.5 ###
+- Make sure field context is set to global for global fields
+
+### 3.8.4 ###
 - Added hook to map custom sources
 
 ### 3.8.3 ###

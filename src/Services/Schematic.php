@@ -66,9 +66,11 @@ class Schematic extends BaseApplication
      *
      * @param string $file
      * @param string $override
-     * @param bool   $force    if set to true items not included in import will be deleted
+     * @param bool   $force if set to true items not included in import will be deleted
+     * @param string $dataTypes The data types to import
      *
      * @return Result
+     * @throws Exception
      */
     public function importFromYaml($file, $override = null, $force = false, $dataTypes = 'all')
     {
@@ -143,7 +145,7 @@ class Schematic extends BaseApplication
             $pluginImportResult = Craft::app()->schematic_plugins->import($plugins);
         }
 
-        if (in_array('assetTransforms', $dataTypes)) {
+        if (in_array('fields', $dataTypes)) {
             $fields = $model->getAttribute('fields');
             $fieldImportResult = Craft::app()->schematic_fields->import($fields, $force);
         }
